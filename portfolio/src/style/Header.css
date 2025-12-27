@@ -2,54 +2,181 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky; 
-  z-index: 10; 
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
   top: 0;
   margin: 0;
   padding: 0;
 }
 
 .Logo {
-  height: 40px;
+  height: clamp(30px, 5vw, 40px);
   pointer-events: none;
 }
 
-.App-header {  
-  min-width: 100%;
-  min-height: 6vh;
-
-  background-color: #040404; 
+.App-header {
+  width: 100%;
+  min-height: 60px;
+  background-color: #040404;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
+  padding: 0 5vw;
+}
+
+@media (min-width: 1024px) {
+  .App-header {
+    padding: 0 20vw;
+  }
 }
 
 .Logo-container {
-  margin-left: 20%;
+  display: flex;
+  align-items: center;
 }
 
-.Button-container{
-  margin-right: 20vw;
-  display: flex;
-  gap: 10%;
-  color: white;
+.Button-container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .Button-container {
+    display: flex;
+    gap: 2rem;
+    color: white;
+  }
 }
 
 .Header button {
   width: fit-content;
-  min-height: 5%;
-  max-height: 30px;
+  height: 3vh;
   background: none;
   border: none;
   border-radius: 6px;
   color: #8a54b1;
   cursor: pointer;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   font-family: monospace;
+  transition: all 0.3s ease;
+  padding: 0 10px;
 }
 
-button:hover {
+.Header button:hover {
   background-color: white;
   color: #251031;
+}
+
+.Hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+@media (min-width: 768px) {
+  .Hamburger {
+    display: none;
+  }
+}
+
+.Hamburger span {
+  width: 3vh;
+  height: 2px;
+  background-color: #8a54b1;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.Hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.Hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.Hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.Mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 75%;
+  height: 100vh;
+  background: linear-gradient(180deg, #251031 0%, #6f0d8e 100%);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding-top: 80px;
+}
+
+.Mobile-menu.open {
+  right: 0; 
+}
+
+.Mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 1vh 5vw;
+}
+
+.Mobile-menu-content button {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(138, 84, 177, 0.3);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: monospace;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.Mobile-menu-content button:hover {
+  background: rgba(138, 84, 177, 0.3);
+  border-color: #8a54b1;
+  transform: translateX(5px);
+  color: white;
+}
+
+.Mobile-logo{
+  margin-top: 10vh;
+  width: 50%;
+  border-radius: 12px;
+}
+
+.Menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
