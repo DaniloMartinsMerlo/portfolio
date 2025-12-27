@@ -7,6 +7,7 @@ import Header from './Header';
 import Intro from './Intro';
 import About from './About';
 import Skills from './Skills';
+import Projects from './Projects';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     <Intro />
     <About />
     <Skills />
+    <Projects />
   </React.StrictMode>
 );
 
