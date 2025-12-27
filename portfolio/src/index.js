@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/index.css';
-import Header from './Header';
 import reportWebVitals from './reportWebVitals';
+
+import Header from './Header';
 import Intro from './Intro';
+import About from './About';
+import Skills from './Skills';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
     <Intro />
+    <About />
+    <Skills />
   </React.StrictMode>
 );
 
