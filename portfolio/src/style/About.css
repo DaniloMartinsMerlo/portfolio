@@ -5,7 +5,7 @@
   background-color: #370746;
   margin: 0;
   padding: 3vh 5vw;
-  border: #ffffff solid 10px;
+  border: #ffffff solid 5px;
 }
 
 @media (min-width: 768px) {
@@ -44,7 +44,7 @@
 }
 
 .About-content {
-  border: #ffffff solid 10px;
+  border: #ffffff solid 5px;
   display: flex;
   justify-content: center;
   align-items: center;

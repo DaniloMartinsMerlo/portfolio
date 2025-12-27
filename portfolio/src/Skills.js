@@ -20,7 +20,7 @@ function Skills() {
     <div className="Skills">
       <div className="Skills-container">
         <div className="Skills-header">
-          <h2 className="Skills-title">Habilidades</h2>
+          <h2 className="Skills-title">HABILIDADES</h2>
           <div className="Skills-underline"></div>
         </div>
 

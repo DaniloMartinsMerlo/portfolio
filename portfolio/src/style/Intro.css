@@ -9,6 +9,7 @@
     padding-right: 10vw;
     padding-top: 13vh;
     padding-bottom: 13vh;
+    border: white solid 5px;
 }
 
 @media (min-width: 768px) {
@@ -94,8 +95,9 @@
     width: 80vw;
     height: 10vh;
 
-    background: none;
-    border: 2px solid #8a54b1;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     color: #ffffff;
     cursor: pointer;

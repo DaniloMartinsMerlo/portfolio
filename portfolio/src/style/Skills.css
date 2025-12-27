@@ -1,10 +1,11 @@
 .Skills {
   min-height: 50vh;
-  background: linear-gradient(135deg, #6f0d8e 0%, #251031 50%, #6f0d8e 100%);
+  background: linear-gradient(0deg,#6f0d8e 0%, #251031 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4vh 10vw; 
+  border: white 5px solid;
 }
 
 @media (min-width: 768px) {
