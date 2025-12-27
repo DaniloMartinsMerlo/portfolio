@@ -1,0 +1,154 @@
+.Intro{
+    display: flex;
+    flex-direction: column;
+
+    min-width: 1vh;
+    background-color: #251031;
+    margin: 0;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 13vh;
+    padding-bottom: 13vh;
+}
+
+@media (min-width: 768px) {
+    .Intro {
+        padding-left: 20vw;
+        padding-right: 20vw;
+        padding-top: 31vh;
+        padding-bottom: 30vh;
+    }
+}
+
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Intro-content {
+    color: white;
+    font-family: monospace;
+}
+
+.Intro-content h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 2vh;
+}
+.Intro-content h3 {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+.Intro-content p {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 3vh;
+}
+
+@media (min-width: 768px) {
+    .Intro-content {
+        color: white;
+        font-family: monospace;
+    }
+
+    .Intro-content h1 {
+        font-size: 5rem;
+        margin: 0;
+    }
+    .Intro-content h3 {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 1vh;
+    }
+
+    .Intro-content p {
+        font-size: 1.5rem;
+        margin-top: 1vh;
+    }
+}
+
+.Intro-buttons {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin-top: 2vh;
+    gap: 3vh;
+}
+
+.Intro-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.75vw;
+    width: 80vw;
+    height: 10vh;
+
+    background: none;
+    border: 2px solid #8a54b1;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+@media (min-width: 768px) {
+
+    .Intro-buttons {
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+        margin-top: 4vh;
+        gap: 25vh;
+    }
+
+    .Intro-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        gap: 10px;
+        width: 210px;
+        height: 75px;
+        
+        padding: 15px;
+
+        background: none;
+        border: 2px solid #8a54b1;
+        border-radius: 6px;
+        color: #8a54b1;
+        cursor: pointer;
+        font-size: 25px;
+        font-family: monospace;
+    }
+}
+
+
+
+.Intro-buttons button:hover {
+    background-color: #8a54b1;
+    color: white;
+    transition: 0.3s;
+}
+
+.arrow-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.download-icon {
+    width: 25px;
+    height: 25px;
+}
